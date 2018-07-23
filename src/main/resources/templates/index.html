@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title>Bonjour!</title>
+</head>
+<body>
+<form action="/" method="post" id="index">
+    <input type="text" name="name" />
+    <select form="index" name="language">
+        <option th:each="language:${languages}" th:value="${language}" th:text="${language}" ></option>
+    </select>
+    <input type="submit" name="Submit" />
+</form>
+<h1 th:text="${returnString}"></h1>
+</body>
+</html>
